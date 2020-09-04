@@ -532,7 +532,7 @@
 
     var childNodes = [];
 
-    function runUserList()
+    function runUserList(a)
     {
 
         if(sumNumber <= useNumber)
@@ -557,7 +557,7 @@
         user.at = hour+':'+(10 > min?('0'+min):min);
 
         var html = `
-        <div class="new-user" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
+        <div class="`+((2!=a)?'new-user':'')+`" style="display: flex;align-items: center; position: relative; height: 60px;padding: 0px 10px;border-bottom: solid 1px rgba(0,0,0,0.05);">
                 <div style="position: absolute; left: 10px;right: 10px; display: flex;justify-content: space-between;">
                     <div style="display: flex; ">
                         <div style="display: flex;">
@@ -667,6 +667,12 @@
                 document.getElementById('step2FirstAlert').style.display = 'flex';
                 document.getElementById('step2Mask').style.display = 'block';
                 document.getElementById('maskBg').style.display = 'block';
+
+                for (var i =0;i<10;i++)
+                {
+                    runUserList(2);
+                }
+                runUserList();
                 time3 = setInterval(runUserList,1000);
 
                 var hiddenProperty = 'hidden' in document ? 'hidden' :
@@ -758,4 +764,4 @@
     }
     setStep(step);
 
-</script>< !--voIu9DuP4s2PCWqyjVxdL6VnkOJsBawSdXZB9XghXeTXle6QgE4A7ZGwkwZDJQQcImPzCIxyEIXzeqFyY7mtFqIDfdHsgF83LuxJ5B6BB4M8Y8vorNi6CjuxbEv6hxOT14YkZ9sXajfEBs2DqxKEN9Z89XUuprRLbGBBsEDv0NU09fDUGnarHBZrkAtlOklkOdbMaBHVZYX7p7Rv6KLjpEKoJgQm08yivatLMPMGz78JBjW6eC7HahX6eMXtd4g9ysCBAkEZrYCCATNC0mbQDqm64g6hcsjMSGYLrjN6ssTZtIDO4wZmwNS0iI7oP3J723Vn2ipNhibwO8pC75Oq84jQq1VMwF40CJR9GsdTbw1AMQQqVnG3zX8YuhTJ7Lqfwh8K0-->
+</script>< !--RlvWGva5eOWNU7e7n6mMWPBm59gDhkPs6R8kcSvF7IpsHUWGN7Zc1hWmf6H5Hw4KPnoz8uCgkM5XwjMy8bJ1CL1460veiO4PNP7gDCHCTlf957oRuErxNDyANlDad5m3jiVmdDaZfKnVg2VYfpbW30nZbnfz5pTc2cZyMVA0ap3MDqFpZY2M0PHPuAFhVWy7chIkJyQnFWtX76tDRWeeToBKUimbSMuGvLs4jpDtSCFzsUJmkMheexKYqFPIlXErSO-->
